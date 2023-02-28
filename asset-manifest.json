@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.0f105de4.css",
-    "main.js": "/static/js/main.d2337ed8.js",
-    "static/js/787.b18a3044.chunk.js": "/static/js/787.b18a3044.chunk.js",
-    "static/media/gitlab.png": "/static/media/gitlab.c3b1dcfdfda9aa721677.png",
-    "static/media/linkedin.png": "/static/media/linkedin.6892b3ae328c7a1e055f.png",
-    "static/media/gmail.png": "/static/media/gmail.a2f2146f929409405da0.png",
-    "static/media/phone.png": "/static/media/phone.d35848942c955a6232b3.png",
-    "index.html": "/index.html",
-    "main.0f105de4.css.map": "/static/css/main.0f105de4.css.map",
-    "main.d2337ed8.js.map": "/static/js/main.d2337ed8.js.map",
-    "787.b18a3044.chunk.js.map": "/static/js/787.b18a3044.chunk.js.map"
+    "main.css": "/Avarice03/RecipeEZ/static/css/main.0f105de4.css",
+    "main.js": "/Avarice03/RecipeEZ/static/js/main.4c21216f.js",
+    "static/js/787.b18a3044.chunk.js": "/Avarice03/RecipeEZ/static/js/787.b18a3044.chunk.js",
+    "static/media/gitlab.png": "/Avarice03/RecipeEZ/static/media/gitlab.c3b1dcfdfda9aa721677.png",
+    "static/media/linkedin.png": "/Avarice03/RecipeEZ/static/media/linkedin.6892b3ae328c7a1e055f.png",
+    "static/media/gmail.png": "/Avarice03/RecipeEZ/static/media/gmail.a2f2146f929409405da0.png",
+    "static/media/phone.png": "/Avarice03/RecipeEZ/static/media/phone.d35848942c955a6232b3.png",
+    "index.html": "/Avarice03/RecipeEZ/index.html",
+    "main.0f105de4.css.map": "/Avarice03/RecipeEZ/static/css/main.0f105de4.css.map",
+    "main.4c21216f.js.map": "/Avarice03/RecipeEZ/static/js/main.4c21216f.js.map",
+    "787.b18a3044.chunk.js.map": "/Avarice03/RecipeEZ/static/js/787.b18a3044.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0f105de4.css",
-    "static/js/main.d2337ed8.js"
+    "static/js/main.4c21216f.js"
   ]
 }
