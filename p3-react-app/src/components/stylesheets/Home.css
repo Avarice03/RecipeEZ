@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+input {
+    border-radius: 10px;
+    background-color: #FFF5E4;
+    padding: 0.5em;
+}
+
+.btn-danger:hover {
+    background-color: #FF9494;
+}
+
+button {
+    margin-bottom: 1em;
+}
+
+.home-container {
+    display: grid;
+    height: 100vh;
+    grid-template: 200px 1fr 50px/ 1fr 4fr 1fr;
+    grid-template-areas: 
+    "hero hero hero"
+    "nav main filter"
+    "footer footer footer";
+}
+
+.home-hero {
+    grid-area: hero;
+    background-color: #FFE3E1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    border-bottom: 2px solid #FF9494;
+}
+
+.home-hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 1000px;
+    background-color: #FFE3E1;
+}
+
+.home-hero-content h1 {
+    font-family: Dosis, sans-serif;
+    font-size: 72px;
+    font-weight: bold;
+    margin-bottom: 0;
+    color: #FF9494;
+}
+
+.home-hero-content p {
+    margin-top: 0;
+    color: #FF9494;
+    border-top: 2px solid #FF9494;
+    padding: 1em;
+}
+
+.home-navigation-container {
+    grid-area: nav;
+    background-color: #FFE3E1;
+}
+
+.home-filters-container {
+    grid-area: filter;
+    background-color: #FFE3E1;
+}
+
+.home-main-container {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    background-color: #FFF5E4;
+    border-left: 2px solid #FF9494;
+    border-right: 2px solid #FF9494;
+}
+
+.home-footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFE3E1;
+    color: #FF9494;
+    border-top: 2px solid #FF9494;
+}
+
+
+
+
+
+/* CSS for pages */
+
+/* About the App */
+.about-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 70%;
+}
+
+.about-container h2 {
+    margin: 1em 0;
+    font-size: 3em;
+    font-family: Dosis, sans-serif;
+    color: #FFD1D1;
+    font-weight: bold;
+}
+
+.about-container p {
+    font-size: 1.5em;
+    text-align: justify;
+}
+
+/* Contact Me */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 70%;
+}
+
+.contact-container h2 {
+    margin: 1em 0;
+    font-size: 3em;
+    font-family: Dosis, sans-serif;
+    color: #FFD1D1;
+    font-weight: bold;
+}
+
+.content-body {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+  
+.contact-item img {
+    height: 60px;
+    width: 60px;
+    margin-right: 1em;
+    background-color: none;
+    border: none
+}
+  
+#contact a {
+    text-decoration: none;
+    color: #3882f6;
+}
+  
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
