@@ -58,12 +58,12 @@ function Login() {
             <small style={{ color: "red", marginBottom: "0.5em" }}>
               {passErrMessage}
             </small>
-            <button type="button" class="btn btn-danger" onClick={handleSignIn}>
+            <button type="button" className="btn btn-danger" onClick={handleSignIn}>
               Sign in
             </button>
             <button
               type="button"
-              class="btn btn-danger"
+              className="btn btn-danger"
               onClick={() => navigate("/home/recipes")}
             >
               Sign in as Guest

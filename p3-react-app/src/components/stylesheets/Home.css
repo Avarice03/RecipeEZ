@@ -96,10 +96,56 @@ button {
 }
 
 
-
-
-
 /* CSS for pages */
+/* Recipes */
+.recipes-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 70%;
+}
+
+/* Timer */
+.timer-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 70%;
+}
+
+.timer-container h2 {
+    font-size: 3em;
+    font-family: Dosis, sans-serif;
+    color: #FFD1D1;
+    font-weight: bold;
+}
+
+.timer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer-display {
+    font-size: 7.5em;
+}
+
+.input-grp{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #FF9494;
+    width: 320px;
+    border-radius: 10px;
+    padding: 1em;
+    margin: 1em;
+    background-color: #FFD1D1;
+    gap: 0.5em;
+}
+
+.input-grp button {
+    margin-bottom: 0;
+}
 
 /* About the App */
 .about-container {
@@ -110,7 +156,7 @@ button {
 }
 
 .about-container h2 {
-    margin: 1em 0;
+    margin-bottom: 1em;
     font-size: 3em;
     font-family: Dosis, sans-serif;
     color: #FFD1D1;
@@ -131,7 +177,7 @@ button {
 }
 
 .contact-container h2 {
-    margin: 1em 0;
+    margin-bottom: 1em;
     font-size: 3em;
     font-family: Dosis, sans-serif;
     color: #FFD1D1;
