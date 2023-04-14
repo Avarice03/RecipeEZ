@@ -1,26 +1,55 @@
 import React, { useEffect, useState } from "react";
+import timerSound from "../audio/alarm-clock.mp3";
 
+// Timer page for RecipeEZ
 function Timer() {
-  const [minutes, setMinutes] = useState(0);
-  const [seconds, setSeconds] = useState(0);
-  const [minutesTimer, setMinutesTimer] = useState(0);
-  const [secondsTimer, setSecondsTimer] = useState(0);
-  const [minutesErrMessage, setMinutesErrMessage] = useState("");
-  const [secondsErrMessage, setSecondsErrMessage] = useState("");
+  const [audio] = useState(new Audio(timerSound));
+  const [playing, setPlaying] = useState(false);
   const [timerStatus, setTimerStatus] = useState(false);
+  const [timerInput, setTimerInput] = useState({
+    seconds: 0,
+    minutes: 0,
+    hours: 0,
+  });
+  const [timerClock, setTimerClock] = useState({
+    seconds: 0,
+    minutes: 0,
+    hours: 0,
+  });
 
+  // Loop timer audio
+  audio.loop = true;
+
+  // Playing and pausing timer audio
+  useEffect(() => {
+    playing ? audio.play() : audio.pause();
+    // playing state as dependency
+  }, [playing]);
+
+  // Countdown Timer
   useEffect(() => {
     const timer = setInterval(() => {
-      if (timerStatus && secondsTimer > 0) {
-        setSecondsTimer(secondsTimer - 1);
+      if (timerStatus && timerClock.seconds > 0) {
+        setTimerClock({ ...timerClock, seconds: timerClock.seconds - 1 });
       }
-      if (timerStatus && secondsTimer === 0) {
-        if (timerStatus && minutesTimer === 0) {
-          clearInterval(timer);
-          alert("PROCESS DONE!");
+      if (timerStatus && timerClock.seconds === 0) {
+        if (timerStatus && timerClock.minutes === 0) {
+          if (timerStatus && timerClock.hours === 0) {
+            clearInterval(timer);
+            setPlaying(true);
+          } else {
+            setTimerClock({
+              hours: timerClock.hours - 1,
+              minutes: 59,
+              seconds: 59,
+            });
+          }
         } else {
-          setMinutesTimer(minutesTimer - 1);
-          setSecondsTimer(59);
+          setTimerClock({
+            ...timerClock,
+            minutes: timerClock.minutes - 1,
+            seconds: 59,
+          });
         }
       }
     }, 1000);
@@ -29,58 +58,70 @@ function Timer() {
     };
   });
 
+  // Function for starting timer
   const startTimer = () => {
-    if (minutes <= 59 || "") {
-      setMinutesErrMessage("");
-    } else {
-      setMinutesErrMessage("Please enter 0-59 only");
-    }
+    let totalTime = 0;
+    setPlaying(false);
 
-    if (seconds <= 59 || "") {
-      setSecondsErrMessage("");
-    } else {
-      setSecondsErrMessage("Please enter 0-59 only");
-    }
+    totalTime += +timerInput.hours * 3600;
+    totalTime += +timerInput.minutes * 60;
+    totalTime += +timerInput.seconds;
 
-    if (seconds <= 59 && minutes <= 59) {
-      setMinutesTimer(minutes);
-      setSecondsTimer(seconds);
-      setSeconds(0);
-      setMinutes(0);
-      setTimerStatus(true);
-    }
+    setTimerClock({
+      seconds: Math.floor((totalTime % 3600) % 60),
+      minutes: Math.floor((totalTime % 3600) / 60),
+      hours: Math.floor(totalTime / 3600),
+    });
+
+    setTimerInput({ seconds: 0, minutes: 0, hours: 0 });
+    setTimerStatus(true);
   };
 
   return (
     <div className="timer-container">
-      <h2>Timer</h2>
+      <h2 className="text-danger">Timer</h2>
       <div className="timer-content">
         <div className="timer-display">
-          {minutesTimer}:{secondsTimer < 10 ? `0${secondsTimer}` : secondsTimer}
+          {timerClock.hours < 10 ? `0${timerClock.hours}` : timerClock.hours}:
+          {timerClock.minutes < 10
+            ? `0${timerClock.minutes}`
+            : timerClock.minutes}
+          :
+          {timerClock.seconds < 10
+            ? `0${timerClock.seconds}`
+            : timerClock.seconds}
         </div>
         <div className="input-grp">
-          <label>Enter minutes: (0-59)</label>
+          <label>Enter hours:</label>
           <input
             type="number"
             min="0"
-            max="59"
-            value={minutes}
-            onChange={(e) => setMinutes(e.target.value)}
+            value={timerInput.hours}
+            onChange={(e) =>
+              setTimerInput({ ...timerInput, hours: e.target.value })
+            }
           ></input>
-          <small style={{ color: "red", marginBottom: "0.5em" }}>
-            {minutesErrMessage}
-          </small>
-          <label>Enter seconds: (0-59)</label>
+          <small style={{ color: "red", marginBottom: "0.5em" }}></small>
+          <label>Enter minutes:</label>
           <input
             type="number"
             min="0"
-            max="59"
-            value={seconds}
-            onChange={(e) => setSeconds(e.target.value)}
+            value={timerInput.minutes}
+            onChange={(e) =>
+              setTimerInput({ ...timerInput, minutes: e.target.value })
+            }
           ></input>
-          <small style={{ color: "red", marginBottom: "0.5em" }}>
-            {secondsErrMessage}
-          </small>
+          <small style={{ color: "red", marginBottom: "0.5em" }}></small>
+          <label>Enter seconds:</label>
+          <input
+            type="number"
+            min="0"
+            value={timerInput.seconds}
+            onChange={(e) =>
+              setTimerInput({ ...timerInput, seconds: e.target.value })
+            }
+          ></input>
+          <small style={{ color: "red", marginBottom: "0.5em" }}></small>
           <button
             type="button"
             className="btn btn-success"
@@ -98,9 +139,12 @@ function Timer() {
           <button
             type="button"
             className="btn btn-danger"
-            onClick={() => setTimerStatus(false)}
+            onClick={() => {
+              setTimerStatus(false);
+              setPlaying(false);
+            }}
           >
-            Stop
+            Pause / Stop
           </button>
         </div>
       </div>
