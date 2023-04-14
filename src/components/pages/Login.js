@@ -1,11 +1,10 @@
 import { useContext, useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import chef from "../images/chef.png";
 import { UserContext } from "../providers/User";
 
 // Login page for RecipeEZ
 function Login() {
-  const [admin, setAdmin] = useContext(UserContext);
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [userErrMessage, setUserErrMessage] = useState("");
@@ -75,7 +74,7 @@ function Login() {
       </div>
       <div className="create-container">
         <span>New to RecipeEZ?</span>
-        <a href="#">Create an account.</a>
+        <a href="/">Create an account.</a>
       </div>
     </div>
   );
