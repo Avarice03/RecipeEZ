@@ -3,7 +3,8 @@ import { UserContext } from "./providers/User";
 import imagePlaceholder from "./images/photo.png";
 
 function RecipeButton({ id, image, name, handleDelete, showRecipe }) {
-
+  const [admin, setAdmin] = useContext(UserContext);
+  
   return (
     <>
       <div className="recipe-card">
