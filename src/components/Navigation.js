@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import recipe from "../components/images/recipe.png";
-import { RecipeContext } from "./providers/RecipeProvider";
 import { UserContext } from "./providers/User";
 
 // Navigation for RecipeEZ
