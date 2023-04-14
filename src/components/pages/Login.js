@@ -5,6 +5,7 @@ import { UserContext } from "../providers/User";
 
 // Login page for RecipeEZ
 function Login() {
+  const [admin, setAdmin] = useContext(UserContext);
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [userErrMessage, setUserErrMessage] = useState("");
