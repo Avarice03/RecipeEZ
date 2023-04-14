@@ -72,7 +72,7 @@ function Login() {
         </div>
         <div className="create-container">
           <span>New to RecipeEZ?</span>
-          <a href="#">Create an account.</a>
+          <a href="/">Create an account.</a>
         </div>
       </div>
       <div className="footer">
