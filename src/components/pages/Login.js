@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import chef from "../images/chef.png";
 import { UserContext } from "../providers/User";
 
@@ -75,7 +75,7 @@ function Login() {
       </div>
       <div className="create-container">
         <span>New to RecipeEZ?</span>
-        <a href="/">Create an account.</a>
+        <a href="#">Create an account.</a>
       </div>
     </div>
   );

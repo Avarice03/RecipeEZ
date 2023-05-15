@@ -1,70 +1,19 @@
-# Getting Started with Create React App
+# RecipeEz
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
+The RecipeEz (Recipe made Easy) app is a digital cookbook that offers a wide range of recipes from various cuisines. The app allows users to search for recipes by its main ingredient (e.g beef, chicken, pork, seafood, vegetarian, others), or its cuisine (e.g Filipino, Japanese, Chinese, Western, etc.), making it easy to find a meal that fits their needs. With easy-to-follow instructions, detailed ingredient lists, and helpful tips, the app enables users to cook delicious meals with ease and confidence.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Browse Recipes:** Guest users can explore the app and view a list of public recipes. Each recipe includes a captivating picture, recipe name, description, ingredients, instructions, servings, category, and cuisine.
+- **Search and Filter:** Users can search for recipes by their name, allowing for quick and easy access to specific dishes. Additionally, users can filter recipes by category and cuisine, helping them find recipes that suit their preferences and dietary needs.
+- **Cooking Timer:** RecipeEZ provides a built-in timer feature, enabling users to set timers for different cooking steps. This helps users keep track of their cooking progress and ensures accurate cooking times.
+- **Admin Functionality:** Admin user have the privilege to manage recipes within the app. They can add new recipes, edit existing ones, and remove recipes as needed, ensuring that the recipe collection stays up to date and relevant.
 
-### `npm start`
+## Notes
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+As this app is designed to be frontend-only, without a database, any modifications made to the recipes, such as additions, edits, or removals, will only be temporary. Once the page is reloaded, the app will revert to its original state, including the original set of recipes.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### To test admin functionality in the app, you can use the following credentials: 
+- username: admin
+- password: admin
